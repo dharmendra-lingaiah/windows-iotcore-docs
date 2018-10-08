@@ -72,18 +72,18 @@ Windows 10 IoT Core works with various silicons that are utilized in hundreds of
     * You may skip this step and use the pre-generated keys for testing only
 5. Configure _settings.xml_
    * General section : Specify the package directories
-    * Tools section : Set the path for the tools
-      - Windows10KitsRoot `(e.g. <Windows10KitsRoot>C:\Program Files (x86)\Windows Kits\10\</Windows10KitsRoot>)`
-      - WindowsSDKVersion `(e.g. <WindowsSDKVersion>10.0.15063.0</WindowsSDKVersion>)`
-        - SDK version installed on your machine is under `C:\Program Files (x86)\Windows Kits\10\`
-    * SecureBoot section : Specify which keys to use for secure boot (PK and SB keys)
-    * BitLocker section : Specify a certificate for Bitlocker data recovery (DRA key)
-    * SIPolicy section : Specify certs that should be trusted
-      * ScanPath : Path of the device for scanning binaries , `\\a.b.c.d\C$`
-      * Update   : Signer of the SIPolicy (PAUTH keys)
-      * User     : User mode certificates (UMCI keys) 
-      * Kernel   : Kernel mode certificates (KMCI keys)
-    * Packaging : Specify the settings for the package generation
+     * Tools section : Set the path for the tools
+       - Windows10KitsRoot `(e.g. <Windows10KitsRoot>C:\Program Files (x86)\Windows Kits\10\</Windows10KitsRoot>)`
+       - WindowsSDKVersion `(e.g. <WindowsSDKVersion>10.0.15063.0</WindowsSDKVersion>)`
+         - SDK version installed on your machine is under `C:\Program Files (x86)\Windows Kits\10\`
+     * SecureBoot section : Specify which keys to use for secure boot (PK and SB keys)
+     * BitLocker section : Specify a certificate for Bitlocker data recovery (DRA key)
+     * SIPolicy section : Specify certs that should be trusted
+       * ScanPath : Path of the device for scanning binaries , `\\a.b.c.d\C$`
+       * Update   : Signer of the SIPolicy (PAUTH keys)
+       * User     : User mode certificates (UMCI keys) 
+       * Kernel   : Kernel mode certificates (KMCI keys)
+     * Packaging : Specify the settings for the package generation
 
 > [!IMPORTANT]
 > In order to assist with testing during the initial development cycle, Microsoft has provided pre-generated keys and certificates where appropriate.  This implies that Microsoft Test, Development and Pre-Release binaries are considered trusted.  During final product creation and image generation, be sure to remove these certifcates and use your own keys to ensure a fully locked down device.
